@@ -26,7 +26,7 @@ markers <- c("CD31", "CD8", "CD45", "CD20", "E-cadherin", "beta-catenin", "CD4",
 ## LCI
 ```r
 #cell matrix 16 markers x 402042 cells
-# mat <- readRDS("./LCI/LCI_CODEX_HCC.mtx.RDS")
+mat <- readRDS("./LCI/LCI_CODEX_HCC.mtx.RDS")
  
 #cell metadata cell_id & x,y coordinates
 meta <- fread("./LCI/LCI_CODEX_HCC.cellmeta.csv")
