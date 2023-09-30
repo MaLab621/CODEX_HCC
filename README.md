@@ -1,7 +1,7 @@
 # CODEX_HCC
 This repo accompanies the following manuscript:  
 
-Maestri E, Kedei N, Khatib S, Forgues M, Ylaya K, Hewitt S, Wang L, Chaisaingmongkol J, Ruchirawat M, Ma L, Wang XW. Spatial proximity of tumor-immune interactions predicts patient outcome in hepatocellular carcinoma. Hepatology (2023). DOI: 10.1097/HEP.0000000000000600 
+Maestri E, Kedei N, Khatib S, Forgues M, Ylaya K, Hewitt S, Wang L, Chaisaingmongkol J, Ruchirawat M, Ma L, Wang XW. Spatial proximity of tumor-immune interactions predicts patient outcome in hepatocellular carcinoma. Hepatology (2023). DOI: [10.1097/HEP.0000000000000600](https://doi.org/10.1097/hep.0000000000000600)
 
 ## DATA
 The raw CODEX data for two HCC cohorts (TIGER and LCI) are available here.
@@ -16,7 +16,7 @@ library(data.table)
 mat <- readRDS("./TIGER/TIGER_CODEX_HCC.mtx.RDS")
 
 #cell metadata with cell_id & x,y coordinates
-meta <- fread("./TIGER/TIGER_CODEX_HCC.cellmeta.csv")
+meta <- fread("./TIGER/TIGER_CODEX_HCC.cellmeta.csv.gz")
 
 #markers in TIGER data:
 markers <- c("CD31", "CD8", "CD45", "CD20", "E-cadherin", "beta-catenin", "CD4", "CD163", "HNFalpha",
@@ -29,7 +29,7 @@ markers <- c("CD31", "CD8", "CD45", "CD20", "E-cadherin", "beta-catenin", "CD4",
 mat <- readRDS("./LCI/LCI_CODEX_HCC.mtx.RDS")
  
 #cell metadata cell_id & x,y coordinates
-meta <- fread("./LCI/LCI_CODEX_HCC.cellmeta.csv")
+meta <- fread("./LCI/LCI_CODEX_HCC.cellmeta.csv.gz")
 
 #Markers in LCI data:
 markers <- c("CD31", "CD8", "CD45", "CD20", "E-cadherin", "beta-catenin", "CD4", "CD163", "HNFalpha",
