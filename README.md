@@ -13,10 +13,10 @@ setwd('your_path/CODEX_HCC')
 library(data.table)
 
 #cell matrix 16 markers x 116912 cells
-mat <- readRDS("./TIGER_CODEX_HCC.mtx.RDS")
+mat <- readRDS("./TIGER/TIGER_CODEX_HCC.mtx.RDS")
 
 #cell metadata with cell_id & x,y coordinates
-meta <- fread("./TIGER_CODEX_HCC.cellmeta.csv")
+meta <- fread("./TIGER/TIGER_CODEX_HCC.cellmeta.csv")
 
 #markers in TIGER data:
 markers <- c("CD31", "CD8", "CD45", "CD20", "E-cadherin", "beta-catenin", "CD4", "CD163", "HNFalpha",
@@ -24,3 +24,14 @@ markers <- c("CD31", "CD8", "CD45", "CD20", "E-cadherin", "beta-catenin", "CD4",
 ```
 
 ## LCI
+```r
+#cell matrix 16 markers x 402042 cells
+# mat <- readRDS("./LCI/LCI_CODEX_HCC.mtx.RDS")
+ 
+#cell metadata cell_id & x,y coordinates
+meta <- fread("./LCI/LCI_CODEX_HCC.cellmeta.csv")
+
+#Markers in LCI data:
+markers <- c("CD31", "CD8", "CD45", "CD20", "E-cadherin", "beta-catenin", "CD4", "CD163", "HNFalpha",
+              "CD68", "CD45RO", "CD11c", "CD45RA", "CD3E", "Ki67", "CD44")
+```
