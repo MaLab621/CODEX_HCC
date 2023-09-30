@@ -6,11 +6,11 @@ Maestri E, Kedei N, Khatib S, Forgues M, Ylaya K, Hewitt S, Wang L, Chaisaingmon
 ## DATA
 The raw CODEX data for two HCC cohorts (TIGER and LCI) are available here.
 
-## TIGER
+## TIGER (n=58)
 ```r
 #read in the data
-setwd('your_path/CODEX_HCC')
 library(data.table)
+setwd('your_path/CODEX_HCC')
 
 #cell matrix 16 markers x 116912 cells
 mat <- readRDS("./TIGER/TIGER_CODEX_HCC.mtx.RDS")
@@ -23,7 +23,7 @@ markers <- c("CD31", "CD8", "CD45", "CD20", "E-cadherin", "beta-catenin", "CD4",
                "CD68", "CD45RO", "CD11c", "CD45RA", "CD3E", "Ki67", "CD44")
 ```
 
-## LCI
+## LCI (n=132)
 ```r
 #cell matrix 16 markers x 402042 cells
 mat <- readRDS("./LCI/LCI_CODEX_HCC.mtx.RDS")
@@ -35,3 +35,6 @@ meta <- fread("./LCI/LCI_CODEX_HCC.cellmeta.csv.gz")
 markers <- c("CD31", "CD8", "CD45", "CD20", "E-cadherin", "beta-catenin", "CD4", "CD163", "HNFalpha",
               "CD68", "CD45RO", "CD11c", "CD45RA", "CD3E", "Ki67", "CD44")
 ```
+Please note the CODEX staining for LCI was done in 2 batches: block1 and block3 (the "batch" label in the cell metadata).
+For each batch, slightly different tuning parameters were used for each marker's threshold for positivity to adjust for background.
+For block1, the channels CD31 and CD20 were 0 due to poor quality staining.
